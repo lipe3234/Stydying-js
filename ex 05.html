@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em vídeo</title>
+</head>
+<style>
+    body{
+        background-color: rgb(167, 167, 167);
+    }
+    p{
+        color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+    <script>
+        var nome = window.prompt("Qual é o seu nome?")
+        var senhacorreta = "senha1234"
+        var senha = window.prompt("Digite a senha:")
+        
+        if (senha === senhacorreta){
+            window.alert(`Seja bem vindo ${nome}!`)
+        }
+        else{
+            window.alert("A senha está errada, tente novamente recarregando a página!")
+            const link = document.createElement('https://www.google.com/'); 
+        }
+        
+        var n1 = Number.parseInt(window.prompt("Digite o primeiro número"))
+        var n2 = Number.parseInt(window.prompt("Digite o segundo número"))
+        var s = n1+n2; // soma
+        var sub = n1-n2;// subtrai
+        var multi = n1*n2; // multiplica
+        var div = n1/n2; // divisão
+        var rest = n1%n2; // resto da divisão 
+        var ele = n1**n2; // elevado, primeiro número = base e o segundo é o número expoente 
+        window.alert("A soma entre " + n1 + " e " + n2 + " é igual a " + s)
+        window.alert("A subtração entre " + n1 + " e " + n2 + " é igual a " + sub)
+        window.alert("A multiplicação entre " + n1 + " e " + n2 + " é igual a " + multi)
+        window.alert("A divisão entre " + n1 + " e " + n2 + " é igual a" + div)
+        window.alert("O resto da divisão entre " + n1 + " e " + n2 + " é igual a " + rest)
+        window.alert("O número " + n1 + " elevado a " + n2 + " é igual a " + ele)
+        
+        document.write("Parabéns pequeno gafanhoto!<br>")
+        document.write("Você conseguiu fazer esse programa sozinho!")
+           </script>
+</body>
+</html>
