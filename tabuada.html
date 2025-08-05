@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        color: rgb(197, 197, 197);
+        background-color: rgb(146, 146, 146);
+        font-family: 'Times New Roman', Times, serif;
+    }
+    header{
+        color:rgb(197, 197, 197);
+        text-align: center;
+    }
+    section{
+        color: rgb(197, 197, 197);
+        background-color: rgb(50, 49, 49);
+        border-radius: 15px;
+        padding: 15px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.363);
+        text-align: center;
+    }
+    H1{
+        text-align: center;
+        color: rgb(197, 197, 197);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style:italic
+    }
+    footer{
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    
+</style>
+<body>
+    <header><h1> Exercício 1 do módulo E</h1></header>
+    <section>
+        <div>
+            <p>Número da tabuada:<p></p> <input type="number" name="num" id="txtn">
+            <p></p>
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+            
+        </div>
+
+        <div>
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima!</option>
+            </select>
+                
+        </div>
+    </div>   
+    </section>
+    <footer>&copy; Site do Ph. Lima </footer>
+</body>
+<script>
+    function tabuada(){
+        let num = document.getElementById('txtn')
+        let tab = document.getElementById('seltab')
+        if (num.value.length == 0){
+            window.alert('Por favor digite um número!')
+        } else {
+            let n = Number(num.value)
+            let c = 1
+            tab.innerHTML = ''
+            while (c <=10){
+                let item = document.createElement('option')
+                item.text = `${n} x ${c} = ${n*c}`
+                item.value = `tab${c}`
+                tab.appendChild(item)
+                c++
+            }
+        }
+    }
+</script>
+</html>
